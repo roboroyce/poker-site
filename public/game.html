@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Poker Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Poker Game</h1>
+  <div id="table-list"></div>
+  <div>
+    <input type="text" id="table-name" placeholder="Table Name">
+    <label><input type="checkbox" id="is-private"> Private Table</label>
+    <button onclick="createTable()">Create Table</button>
+  </div>
+  <div id="game-area" style="display:none;">
+    <h2 id="table-name-display"></h2>
+    <div id="players"></div>
+    <button onclick="performAction('fold')">Fold</button>
+    <button onclick="performAction('call')">Call</button>
+    <button onclick="performAction('raise')">Raise</button>
+  </div>
+  <a href="/admin.html" id="admin-link" style="display:none;">Admin Panel</a>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
